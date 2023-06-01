@@ -18,5 +18,21 @@ Diseña un algoritmo que imprima los números impares entre un número dado por 
 7) Cuando sale del bucle se muestra por pantalla el array con los números impares.
 
 Fin
-
 */
+
+function imprimeImpar(numero) {
+  let impares = [];
+
+  for (let i = numero; i < numero + 51; i++) {
+    if (i % 2 !== 0) {
+      impares.push(i);
+    }
+  }
+
+  return impares;
+}
+
+let num = parseInt(prompt("Ingrese un número:"));
+let resultado = imprimeImpar(num);
+console.log("Números impares:");
+console.log(resultado);

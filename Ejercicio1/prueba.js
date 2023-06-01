@@ -21,3 +21,26 @@ la cantidad de veces que aparece la letra en la frase.
 
 Fin.
 */
+
+function contarLasLetras(frase, letra) {
+  let contador = 0;
+
+  frase = frase.toLowerCase();
+
+  for (let i = 0; i < frase.length; i++) {
+    let caracter = frase[i];
+
+    if (caracter === letra) {
+      contador++;
+    }
+  }
+
+  return contador;
+}
+
+let frase = prompt("Ingrese una frase:");
+let letra = prompt("Ingrese la letra a contar:");
+let resultado = contarLasLetras(frase, letra);
+console.log(
+  `La letra '${letra}' aparece ${resultado} veces en la frase ingresada.`
+);
